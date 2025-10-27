@@ -32,7 +32,7 @@ test.describe("GoRest API Comments", () => {
 
     const createdComment = await response.json();
 
-    expect(createdComment).toMatchObject(createdComment);
+    expect(createdComment).toMatchObject(commentData);
 
     const valid = ajv.validate(commentSchema, createdComment);
     expect(valid).toBe(true);
