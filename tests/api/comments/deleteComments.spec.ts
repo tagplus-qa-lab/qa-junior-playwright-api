@@ -1,6 +1,6 @@
 import { test, expect, request } from '@playwright/test';
 import dotenv from 'dotenv';
-import { fakeComment } from '../../helpers/utils';
+import { getRandomId } from '../../helpers/data';
 
 dotenv.config();
 
@@ -9,18 +9,7 @@ const BASE_URL = process.env.BASE_URL!;
 
 test.describe('GoRest API Comments', () => {
   test('TC-COMMENT-004: DELETE /comments/:id deve deletar um comentário', async ({ request }) => {
-    const createResponse = await request.post(`${BASE_URL}/comments`, {
-      headers: {
-        'Accept': 'application/json',
-        'Authorization': `Bearer ${TOKEN}`,
-      },
-      data: fakeComment,
-    });
-
-    expect(createResponse.ok()).toBeTruthy();
-    const comment = await createResponse.json();
-
-    const deleteResponse = await request.delete(`${BASE_URL}/comments/${comment.id}`, {
+    const deleteResponse = await request.delete(`${BASE_URL}/comments/${await getRandomId(request, "comment")}`, {
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${TOKEN}`,
