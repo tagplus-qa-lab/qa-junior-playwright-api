@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import dotenv from "dotenv";
 import Ajv from "ajv";
-import { generateFakePost } from "../../helpers/utils";
-import { postSchema } from "../../schemas/postSchema";
-import { getRandomId } from "../../helpers/data";
+import { generateFakePost } from "@helpers/utils";
+import { postSchema } from "@schemas/postSchema";
+import { getRandomId } from "@helpers/data";
 
 dotenv.config();
 
