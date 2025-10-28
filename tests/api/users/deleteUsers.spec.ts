@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import dotenv from "dotenv";
-import { getRandomId } from "../../helpers/data";
+import { getRandomId } from "@helpers/data";
 
 dotenv.config();
 

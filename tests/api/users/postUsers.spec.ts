@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
 import dotenv from "dotenv";
 import Ajv from "ajv";
-import { generateFakeUser } from "../../helpers/utils";
-import { userSchema } from "../../schemas/userSchema";
+import { generateFakeUser } from "@helpers/utils";
+import { userSchema } from "@schemas/userSchema";
 
 dotenv.config();
 
