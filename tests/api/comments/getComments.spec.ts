@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import * as dotenv from 'dotenv';
 import Ajv from 'ajv';
-import { commentSchema } from '../../schemas/commentSchema';
+import { commentSchema } from '@schemas/commentSchema';
 
 dotenv.config();
 
