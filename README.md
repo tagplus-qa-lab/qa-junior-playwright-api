@@ -105,6 +105,8 @@ No projeto, algumas documentações adicionais estão disponíveis para referên
   - Todos requisitos cumpridos e documentados
 - Versão: 1.0.1
   - Correção da pipeline
+- Versão: 1.0.2
+  - Novas documentações
 - Todas as alterações foram commitadas e revisadas via pull request para manter a consistência do código, além de usar o Kanban para fins de organização de tarefas.
 
 ### Padrões de Desenvolvimento
